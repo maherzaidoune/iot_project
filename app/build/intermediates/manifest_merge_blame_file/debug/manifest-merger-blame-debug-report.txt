@@ -1,0 +1,60 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.zaidoun.karess"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="27"
+8-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="com.google.android.things.permission.USE_PERIPHERAL_IO" />
+11-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:4:5-5:81
+11-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:5:9-78
+12
+13    <application
+13-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:6:5-23:19
+14        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+14-->[androidx.core:core:1.2.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e298e0eee40a778375f30f2da47a787b/core-1.2.0/AndroidManifest.xml:24:18-86
+15        android:debuggable="true"
+16        android:extractNativeLibs="false"
+17        android:label="@string/app_name"
+17-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:6:18-50
+18        android:testOnly="true" >
+19        <uses-library android:name="com.google.android.things" />
+19-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:7:9-66
+19-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:7:23-63
+20
+21        <activity android:name="com.zaidoun.karess.MainActivity" >
+21-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:9:9-22:20
+21-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:9:19-47
+22            <intent-filter>
+22-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:10:13-14:29
+23                <action android:name="android.intent.action.MAIN" />
+23-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:11:17-69
+23-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:11:25-66
+24
+25                <category android:name="android.intent.category.LAUNCHER" />
+25-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:13:17-77
+25-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:13:27-74
+26            </intent-filter>
+27            <!-- Make this the first activity that is displayed when the device boots. -->
+28            <intent-filter>
+28-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:16:13-21:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:11:17-69
+29-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:11:25-66
+30
+31                <category android:name="android.intent.category.HOME" />
+31-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:19:17-73
+31-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:19:27-70
+32                <category android:name="android.intent.category.DEFAULT" />
+32-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:20:17-76
+32-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:20:27-73
+33            </intent-filter>
+34        </activity>
+35    </application>
+36
+37</manifest>

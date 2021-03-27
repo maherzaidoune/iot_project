@@ -1,0 +1,2 @@
+com/zaidoun/karess/BuildConfig.java
+ com.zaidoun.karess.BuildConfig
