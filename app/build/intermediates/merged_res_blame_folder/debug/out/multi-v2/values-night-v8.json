@@ -4,7 +4,7 @@
             "outputFile": "/Users/macbook/Desktop/karess/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/f4bdbe85129800ca18f194e45ead623c/appcompat-1.1.0/res/values-night-v8/values-night-v8.xml",
+                    "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/e948765da6047332cc26ad7542036da7/appcompat-1.1.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

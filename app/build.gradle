@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.zaidoun.karess"
+        applicationId "com.zaidoun.client"
         minSdkVersion 27
         targetSdkVersion 30
         versionCode 1
@@ -38,4 +38,11 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     compileOnly 'com.google.android.things:androidthings:1.0'
+    implementation platform('com.google.firebase:firebase-bom:26.8.0')
+
+    // Declare the dependency for the Realtime Database library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-database-ktx'
 }
+
+apply plugin: 'com.google.gms.google-services'

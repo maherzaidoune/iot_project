@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.zaidoun.karess"
+3    package="com.zaidoun.client"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
@@ -14,47 +14,123 @@
 11-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:4:5-5:81
 11-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:5:9-78
 12
-13    <application
-13-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:6:5-23:19
-14        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-14-->[androidx.core:core:1.2.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e298e0eee40a778375f30f2da47a787b/core-1.2.0/AndroidManifest.xml:24:18-86
-15        android:debuggable="true"
-16        android:extractNativeLibs="false"
-17        android:label="@string/app_name"
-17-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:6:18-50
-18        android:testOnly="true" >
-19        <uses-library android:name="com.google.android.things" />
-19-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:7:9-66
-19-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:7:23-63
-20
-21        <activity android:name="com.zaidoun.karess.MainActivity" >
-21-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:9:9-22:20
-21-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:9:19-47
-22            <intent-filter>
-22-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:10:13-14:29
-23                <action android:name="android.intent.action.MAIN" />
-23-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:11:17-69
-23-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:11:25-66
-24
-25                <category android:name="android.intent.category.LAUNCHER" />
-25-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:13:17-77
-25-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:13:27-74
-26            </intent-filter>
-27            <!-- Make this the first activity that is displayed when the device boots. -->
-28            <intent-filter>
-28-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:16:13-21:29
-29                <action android:name="android.intent.action.MAIN" />
-29-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:11:17-69
-29-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:11:25-66
-30
-31                <category android:name="android.intent.category.HOME" />
-31-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:19:17-73
-31-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:19:27-70
-32                <category android:name="android.intent.category.DEFAULT" />
-32-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:20:17-76
-32-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:20:27-73
-33            </intent-filter>
-34        </activity>
-35    </application>
-36
-37</manifest>
+13    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+14    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[com.google.firebase:firebase-database:19.7.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a4213ddaa3add2616a900de532945512/jetified-firebase-database-19.7.0/AndroidManifest.xml:25:5-79
+15-->[com.google.firebase:firebase-database:19.7.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a4213ddaa3add2616a900de532945512/jetified-firebase-database-19.7.0/AndroidManifest.xml:25:22-76
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->[com.google.firebase:firebase-database:19.7.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a4213ddaa3add2616a900de532945512/jetified-firebase-database-19.7.0/AndroidManifest.xml:26:5-67
+16-->[com.google.firebase:firebase-database:19.7.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a4213ddaa3add2616a900de532945512/jetified-firebase-database-19.7.0/AndroidManifest.xml:26:22-64
+17
+18    <application
+18-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:6:5-23:19
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.2.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/f90844db3ad3070cc8b12417d2a6f2c8/core-1.2.0/AndroidManifest.xml:24:18-86
+20        android:debuggable="true"
+21        android:extractNativeLibs="false"
+22        android:label="@string/app_name"
+22-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:6:18-50
+23        android:testOnly="true" >
+24        <uses-library android:name="com.google.android.things" />
+24-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:7:9-66
+24-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:7:23-63
+25
+26        <activity android:name="com.zaidoun.karess.MainActivity" >
+26-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:9:9-22:20
+26-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:9:19-47
+27            <intent-filter>
+27-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:10:13-14:29
+28                <action android:name="android.intent.action.MAIN" />
+28-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:11:17-69
+28-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:11:25-66
+29
+30                <category android:name="android.intent.category.LAUNCHER" />
+30-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:13:17-77
+30-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:13:27-74
+31            </intent-filter>
+32            <!-- Make this the first activity that is displayed when the device boots. -->
+33            <intent-filter>
+33-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:16:13-21:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:11:17-69
+34-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:11:25-66
+35
+36                <category android:name="android.intent.category.HOME" />
+36-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:19:17-73
+36-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:19:27-70
+37                <category android:name="android.intent.category.DEFAULT" />
+37-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:20:17-76
+37-->/Users/macbook/Desktop/karess/app/src/main/AndroidManifest.xml:20:27-73
+38            </intent-filter>
+39        </activity>
+40
+41        <service
+41-->[com.google.firebase:firebase-database-ktx:19.7.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/aba159c6cf75c39244fc2cf1b93f1a22/jetified-firebase-database-ktx-19.7.0/AndroidManifest.xml:12:9-18:19
+42            android:name="com.google.firebase.components.ComponentDiscoveryService"
+42-->[com.google.firebase:firebase-database-ktx:19.7.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/aba159c6cf75c39244fc2cf1b93f1a22/jetified-firebase-database-ktx-19.7.0/AndroidManifest.xml:13:13-84
+43            android:directBootAware="true"
+43-->[com.google.firebase:firebase-common:19.5.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e4c699b212ea03cb8fe5d2551b70ca7f/jetified-firebase-common-19.5.0/AndroidManifest.xml:35:13-43
+44            android:exported="false" >
+44-->[com.google.firebase:firebase-database-ktx:19.7.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/aba159c6cf75c39244fc2cf1b93f1a22/jetified-firebase-database-ktx-19.7.0/AndroidManifest.xml:14:13-37
+45            <meta-data
+45-->[com.google.firebase:firebase-database-ktx:19.7.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/aba159c6cf75c39244fc2cf1b93f1a22/jetified-firebase-database-ktx-19.7.0/AndroidManifest.xml:15:13-17:85
+46                android:name="com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseKtxRegistrar"
+46-->[com.google.firebase:firebase-database-ktx:19.7.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/aba159c6cf75c39244fc2cf1b93f1a22/jetified-firebase-database-ktx-19.7.0/AndroidManifest.xml:16:17-124
+47                android:value="com.google.firebase.components.ComponentRegistrar" />
+47-->[com.google.firebase:firebase-database-ktx:19.7.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/aba159c6cf75c39244fc2cf1b93f1a22/jetified-firebase-database-ktx-19.7.0/AndroidManifest.xml:17:17-82
+48            <meta-data
+48-->[com.google.firebase:firebase-common-ktx:19.5.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e916f3d076e2c6d97106bb6dc15b5d30/jetified-firebase-common-ktx-19.5.0/AndroidManifest.xml:15:13-17:85
+49                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+49-->[com.google.firebase:firebase-common-ktx:19.5.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e916f3d076e2c6d97106bb6dc15b5d30/jetified-firebase-common-ktx-19.5.0/AndroidManifest.xml:16:17-113
+50                android:value="com.google.firebase.components.ComponentRegistrar" />
+50-->[com.google.firebase:firebase-common-ktx:19.5.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e916f3d076e2c6d97106bb6dc15b5d30/jetified-firebase-common-ktx-19.5.0/AndroidManifest.xml:17:17-82
+51            <meta-data
+51-->[com.google.firebase:firebase-database:19.7.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a4213ddaa3add2616a900de532945512/jetified-firebase-database-19.7.0/AndroidManifest.xml:32:13-34:85
+52                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+52-->[com.google.firebase:firebase-database:19.7.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a4213ddaa3add2616a900de532945512/jetified-firebase-database-19.7.0/AndroidManifest.xml:33:17-109
+53                android:value="com.google.firebase.components.ComponentRegistrar" />
+53-->[com.google.firebase:firebase-database:19.7.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a4213ddaa3add2616a900de532945512/jetified-firebase-database-19.7.0/AndroidManifest.xml:34:17-82
+54            <!--
+55                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+56                clients to use it as well, by defining this registrar in their own core/common library.
+57            -->
+58            <meta-data
+58-->[com.google.firebase:firebase-common:19.5.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e4c699b212ea03cb8fe5d2551b70ca7f/jetified-firebase-common-19.5.0/AndroidManifest.xml:43:13-45:85
+59                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+59-->[com.google.firebase:firebase-common:19.5.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e4c699b212ea03cb8fe5d2551b70ca7f/jetified-firebase-common-19.5.0/AndroidManifest.xml:44:17-121
+60                android:value="com.google.firebase.components.ComponentRegistrar" />
+60-->[com.google.firebase:firebase-common:19.5.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e4c699b212ea03cb8fe5d2551b70ca7f/jetified-firebase-common-19.5.0/AndroidManifest.xml:45:17-82
+61        </service>
+62
+63        <provider
+63-->[com.google.firebase:firebase-common:19.5.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e4c699b212ea03cb8fe5d2551b70ca7f/jetified-firebase-common-19.5.0/AndroidManifest.xml:26:9-31:39
+64            android:name="com.google.firebase.provider.FirebaseInitProvider"
+64-->[com.google.firebase:firebase-common:19.5.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e4c699b212ea03cb8fe5d2551b70ca7f/jetified-firebase-common-19.5.0/AndroidManifest.xml:27:13-77
+65            android:authorities="com.zaidoun.client.firebaseinitprovider"
+65-->[com.google.firebase:firebase-common:19.5.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e4c699b212ea03cb8fe5d2551b70ca7f/jetified-firebase-common-19.5.0/AndroidManifest.xml:28:13-72
+66            android:directBootAware="true"
+66-->[com.google.firebase:firebase-common:19.5.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e4c699b212ea03cb8fe5d2551b70ca7f/jetified-firebase-common-19.5.0/AndroidManifest.xml:29:13-43
+67            android:exported="false"
+67-->[com.google.firebase:firebase-common:19.5.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e4c699b212ea03cb8fe5d2551b70ca7f/jetified-firebase-common-19.5.0/AndroidManifest.xml:30:13-37
+68            android:initOrder="100" />
+68-->[com.google.firebase:firebase-common:19.5.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e4c699b212ea03cb8fe5d2551b70ca7f/jetified-firebase-common-19.5.0/AndroidManifest.xml:31:13-36
+69
+70        <activity
+70-->[com.google.android.gms:play-services-base:17.0.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/9202a445b37b0da413012d8a17c93757/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+71            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+71-->[com.google.android.gms:play-services-base:17.0.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/9202a445b37b0da413012d8a17c93757/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+72            android:exported="false"
+72-->[com.google.android.gms:play-services-base:17.0.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/9202a445b37b0da413012d8a17c93757/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+73            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+73-->[com.google.android.gms:play-services-base:17.0.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/9202a445b37b0da413012d8a17c93757/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+74
+75        <meta-data
+75-->[com.google.android.gms:play-services-basement:17.0.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/96e79c06830078825d32e697a42dca0e/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+76            android:name="com.google.android.gms.version"
+76-->[com.google.android.gms:play-services-basement:17.0.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/96e79c06830078825d32e697a42dca0e/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+77            android:value="@integer/google_play_services_version" />
+77-->[com.google.android.gms:play-services-basement:17.0.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/96e79c06830078825d32e697a42dca0e/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+78    </application>
+79
+80</manifest>

@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.zaidoun.karess",
+  "applicationId": "com.zaidoun.client",
   "variantName": "processDebugResources",
   "elements": [
     {

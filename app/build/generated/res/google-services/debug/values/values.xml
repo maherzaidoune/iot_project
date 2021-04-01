@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">546509926428-jftu03s2a6jmnccve4glscuupb3h1io3.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">546509926428</string>
+    <string name="google_api_key" translatable="false">AIzaSyBou5aSESQX52fjbY2R-w5LVcwaPXAATW4</string>
+    <string name="google_app_id" translatable="false">1:546509926428:android:836988310e00b148652fd9</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBou5aSESQX52fjbY2R-w5LVcwaPXAATW4</string>
+    <string name="google_storage_bucket" translatable="false">iotproj-fe763.appspot.com</string>
+    <string name="project_id" translatable="false">iotproj-fe763</string>
+</resources>
